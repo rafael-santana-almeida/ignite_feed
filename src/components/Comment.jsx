@@ -14,13 +14,13 @@ export function Comment() {
         <div className={styles.commentContent}>
           <header>
             <div className={styles.authorAndTime}>
-              <strong>Rafael Santana</strong>
+              <strong>Dayna Caroline</strong>
 
               <time title='12 de Junho às 20:57' dateTime='2022-06-12 20:57:00'>Cerca de 1h atrás</time>
             </div>
 
             <button title='Deletar comentário'>
-              <Trash size={20} />
+              <Trash size={24} />
             </button>
           </header>
 
