@@ -41,8 +41,6 @@ export function Post({ author, content, publishedAt}) {
       return comment !== commentToDelete;
     });
 
-    console.log({commentToDelete})
-
     setComments(commentsWithoutDeletedOne);
   }
 
