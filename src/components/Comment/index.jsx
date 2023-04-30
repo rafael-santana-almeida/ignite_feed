@@ -4,7 +4,11 @@ import { Avatar } from '../Avatar';
 
 import styles from './styles.module.css';
 
-export function Comment() {
+export function Comment({ data, onDeleteComment }) {
+  function handleDeleteComment() {
+    onDeleteComment(data.id);
+  }
+
   return (
     <div className={styles.comment}>
       <Avatar hasBorder={false} src="https://github.com/diego3g.png" />
@@ -13,16 +17,16 @@ export function Comment() {
         <div className={styles.commentContent}>
           <header>
             <div className={styles.authorAndTime}>
-              <strong>Diego Fernandes</strong>
+              <strong>{data.author}</strong>
               <time title='13 de Abril ás 20:57' dateTime='2023-04-13 20:57:38'>Cerca de 1h atrás</time>
             </div>
 
-            <button title='Deletar comentário'>
+            <button title='Deletar comentário' onClick={handleDeleteComment}>
               <Trash size={24} />
             </button>
           </header>
 
-          <p>Muito bom Devon, parabéns!! 👏👏</p>
+          <p>{data.content}</p>
         </div>
 
         <footer>
